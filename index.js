@@ -66,7 +66,8 @@ function getPosition(position) {
   axios.get(apiUrl).then(currentTemp);
 }
 
-function buttonClick() {
+function buttonClick(event) {
+  event.preventDefault();
   navigator.geolocation.getCurrentPosition(getPosition);
 }
 
