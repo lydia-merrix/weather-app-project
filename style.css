@@ -40,7 +40,7 @@ li:first-letter {
   line-height: 18px;
   margin-top: 10px;
 }
-.temperature strong {
+.temperatures {
   color: black;
   font-size: 64px;
   font-weight: 500;
