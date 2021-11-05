@@ -17,70 +17,72 @@
 
   <body>
     <div class="container">
-      <div class="weather-app">
-        <form class="search-form" id="search-form">
-          <div class="row">
-            <div class="col-6">
-              <input
-                type="search"
-                placeholder="Type a City"
-                autofocus="on"
-                autocomplete="off"
-                id="city-input"
-                class="form-control shadow-sm"
-              />
-            </div>
+      <div class="weather-app-wrapper">
+        <div class="weather-app">
+          <form class="search-form" id="search-form">
+            <div class="row">
+              <div class="col-6">
+                <input
+                  type="search"
+                  placeholder="Type a City"
+                  autofocus="on"
+                  autocomplete="off"
+                  id="city-input"
+                  class="form-control shadow-sm"
+                />
+              </div>
 
-            <div class="col-6">
-              <input
-                type="submit"
-                value="search"
-                class="form-control btn btn-primary shadow-sm"
-              />
-            </div>
-          </div>
-        </form>
-
-        <button id="current-Location">My Location</button>
-
-        <h1 id="city">Orlando</h1>
-        <ul>
-          <li id="date-time"></li>
-          <li><span id="sky"></span></li>
-        </ul>
-        <h2>Current Temperature</h2>
-        <div class="row">
-          <div class="col-6">
-            <div class="clearfix">
-              <img
-                src="https://emojis.wiki/emoji-pics/facebook/sun-behind-small-cloud-facebook.png"
-                alt="sunny"
-                class="weather float-left"
-              />
-              <div class="float-left">
-                <span class="temperatures" id="temperature">0</span>
+              <div class="col-6">
+                <input
+                  type="submit"
+                  value="search"
+                  class="form-control btn btn-primary shadow-sm"
+                />
               </div>
             </div>
-          </div>
-          <div class="col-6">
-            <ul>
-              <li>Sunrise: <span id="sunrise">0</span></li>
-              <br />
-              <li>Sunset: <span id="sunset">0</span></li>
-              <br />
-              <li>Wind: <span id="wind">0</span>km/h</li>
-              <br />
-              <li>Skies: <span id="skies">0</span></li>
-              <br />
-              <li>Humidity: <span id="humidity">0 </span>%</li>
-            </ul>
-            <a href="https://github.com/lydia-merrix/weather-app-project"
-              >open-source code</a
-            >
-            by Lydia Merrix
+          </form>
+
+          <button id="current-Location">My Location</button>
+
+          <h1 id="city">Orlando</h1>
+          <ul>
+            <li id="date-time"></li>
+            <li><span id="sky"></span></li>
+          </ul>
+          <h2>Current Temperature</h2>
+          <div class="row">
+            <div class="col-6">
+              <div class="clearfix">
+                <img
+                  src="https://emojis.wiki/emoji-pics/facebook/sun-behind-small-cloud-facebook.png"
+                  alt="sunny"
+                  class="weather float-left"
+                />
+                <div class="float-left">
+                  <span class="temperatures" id="temperature">0</span>
+                </div>
+              </div>
+            </div>
+            <div class="col-6">
+              <ul>
+                <li>Sunrise: <span id="sunrise">0</span></li>
+                <br />
+                <li>Sunset: <span id="sunset">0</span></li>
+                <br />
+                <li>Wind: <span id="wind">0</span>km/h</li>
+                <br />
+                <li>Skies: <span id="skies">0</span></li>
+                <br />
+                <li>Humidity: <span id="humidity">0 </span>%</li>
+              </ul>
+            </div>
           </div>
         </div>
       </div>
+      <a href="https://github.com/lydia-merrix/weather-app-project"
+        >open-source code</a
+      >
+      by Lydia Merrix
     </div>
     <script src="index.js"></script>
   </body>

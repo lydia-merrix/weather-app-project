@@ -22,13 +22,7 @@ li {
   margin: 0;
   padding: 0;
 }
-.weather-app {
-  border: 1px solid rgb(123, 126, 126);
-  padding: 15px;
-  margin: 20px auto;
-  border-radius: 20px;
-  width: 75%;
-}
+
 .date-time {
   color: rgb(22, 31, 31);
   font-size: 20px;
@@ -58,4 +52,16 @@ li {
 .a {
   font-weight: 100;
   color: blue;
+}
+.weather-app-wrapper{
+max-width:600px;
+margin: 30px auto;
+}
+.weather-app {
+  border: 1px solid rgb(123, 126, 126);
+  padding: 15px;
+  margin: 20px auto;
+  border-radius: 20px;
+  width: 75%;
+  
 }
