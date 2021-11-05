@@ -92,7 +92,7 @@ function showTemperature(response) {
     response.data.weather[0].description;
   document.querySelector("#humidity").innerHTML = response.data.main.humidity;
   // let iconElement = document.querySelector("#icon")
-  // iconElement.setAttribute("src, `http://openweathermap.org/img/wn/04d.png"`);
+  // iconElement.setAttribute("src, `http://openweathermap.org/img/wn/04d@2x.png"`);
   // iconElement.setAttribute("alt", response.data.weather[0].description);
 }
 
