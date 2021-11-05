@@ -24,7 +24,8 @@ function formatDate(date) {
 let dateElement = document.querySelector("#date-time");
 let currentTime = new Date();
 dateElement.innerHTML = formatDate(currentTime);
-
+let searchForm = document.querySelector("#search-form");
+searchForm.addEventListener("submit", getCity);
 // search engine
 function search(event) {
   event.preventDefault();
@@ -33,8 +34,7 @@ function search(event) {
   cityElement.innerHTML = cityInput.value;
 }
 
-let searchForm = document.querySelector("#search-form");
-searchForm.addEventListener("submit", getCity);
+
 
 //location
 function getCity(event) {
@@ -63,7 +63,7 @@ function getPosition(position) {
   let apiKey = "fd9d9da952d98d244f4e2349d84a75af";
   let apiUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${apiKey}&units=${units}`;
 
-  axios.get(apiUrl).then(currentTemp);
+  axios.get(apiUrl).then(showTemperature);
 }
 
 function buttonClick(event) {
@@ -73,6 +73,15 @@ function buttonClick(event) {
 
 let buttonPress = document.querySelector("button");
 buttonPress.addEventListener("click", buttonClick);
+function formatTime(timestamp){
+  let time= new Date(timestamp *1000);
+  let hours = time.getHours();
+  if (hours<10){hours = `0$(hours)`}
+  let minutes = time.getMinutes();
+  if (minutes < 10) {minutes = `0$(minutes)`
+}
+reurn `$(hours):${minutes}`;
+}
 
 function showTemperature(response) {
   document.querySelector("#city").innerHTML = response.data.name;
@@ -80,10 +89,11 @@ function showTemperature(response) {
     response.data.main.temp
   );
   // figure out weather app code to code times and add elements
-  // document.querySelector("#sunrise").innerHTML = response.data.sys.sunrise;
-  //document.querySelector("#sunset").innerHTML = Math.round(
-  //  response.data.sys.sunset
-  //);
+  document.querySelector("#sunrise").innerHTML = formatTime(
+    response.data.sys.sunrise
+  );
+  document.querySelector("#sunset").innerHTML = formatTime(response.data.sys.sunset);
+  
   document.querySelector("#wind").innerHTML = Math.round(
     response.data.wind.speed
   );
@@ -91,12 +101,12 @@ function showTemperature(response) {
   document.querySelector("#sky").innerHTML =
     response.data.weather[0].description;
   document.querySelector("#humidity").innerHTML = response.data.main.humidity;
-  //let iconElement = document.querySelector("#icon");
-  //iconElement.setAttribute(
-  //  "src",
-  // `http://openweathermap.org/img/wn/04d@2x.png"`
-  // );
-  //iconElement.setAttribute("alt", response.data.weather[0].description);
+  let iconElement = document.querySelector("#icon");
+  iconElement.setAttribute(
+    "src",
+   `http://openweathermap.org/img/wn/${response.data.weather[0].icon.04d@2x.png`
+   );
+  iconElement.setAttribute("alt", response.data.weather[0].description);
 }
 
 //to add a button for celc or fahr
