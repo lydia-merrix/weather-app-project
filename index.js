@@ -51,7 +51,7 @@ function getCity(event) {
 function currentTemp(response) {
   console.log(response.data.main.temp);
   let showCurrentTemp = document.querySelector("#temperature");
-  showCurrentTemp.innerHTML = `${Math.round(response.data.main.temp)}°C`;
+  showCurrentTemp.innerHTML = `${Math.round(response.data.main.temp)}`;
   let currentLocation = document.querySelector("#city");
   currentLocation.innerHTML = `${response.data.name}`;
 }
