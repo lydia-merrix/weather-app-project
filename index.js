@@ -88,7 +88,8 @@ function showTemperature(response) {
     response.data.wind.speed
   );
   document.querySelector("#skies").innerHTML = response.data.weather[0].main;
-  document.querySelector("#sky").innerHTML = response.data.weather.icon;
+  document.querySelector("#sky").innerHTML =
+    response.data.weather[0].description;
   document.querySelector("#humidity").innerHTML = response.data.main.humidity;
 }
 
