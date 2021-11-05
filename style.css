@@ -10,7 +10,7 @@ h1 {
 }
 li {
   color: rgb(26, 32, 32);
-  font-size: 16px;
+  font-size: 24px;
   font-weight: 500;
   height: 19px;
   line-height: 1px;
@@ -24,6 +24,13 @@ li {
   margin: 20px auto;
   border-radius: 20px;
   width: 75%;
+}
+.date-time {
+  color: rgb(22, 31, 31);
+  font-size: 20px;
+  font-weight: 100;
+  line-height: 28px;
+  margin: 0;
 }
 .temperature {
   color: black;
@@ -45,6 +52,6 @@ li {
   top: -32px;
 }
 .a {
-font-weight:100;
-color: blue;
+  font-weight: 100;
+  color: blue;
 }
