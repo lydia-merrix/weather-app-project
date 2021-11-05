@@ -22,10 +22,13 @@ li {
   margin: 0;
   padding: 0;
 }
+li:first-letter {
+  text-transform: capitalize;
+}
 
 .date-time {
   color: rgb(22, 31, 31);
-  font-size: 20px;
+  font-size: 16px;
   font-weight: 100;
   line-height: 18px;
   margin-top: 10px;
@@ -47,12 +50,8 @@ li {
 .icon {
   height: 5px;
   width: 5px;
-  margin-right: 10px;
 }
-.details {
-  font-weight: 300;
-  color: blue;
-}
+
 .units {
   position: relative;
   top: -32px;
