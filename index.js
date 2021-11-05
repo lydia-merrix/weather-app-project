@@ -91,9 +91,14 @@ function showTemperature(response) {
   document.querySelector("#sky").innerHTML =
     response.data.weather[0].description;
   document.querySelector("#humidity").innerHTML = response.data.main.humidity;
-  // let iconElement = document.querySelector("#icon")
-  // iconElement.setAttribute("src, `http://openweathermap.org/img/wn/04d@2x.png"`);
-  // iconElement.setAttribute("alt", response.data.weather[0].description);
+  let iconElement = document.querySelector("#icon");
+  //iconElement.setAttribute(
+  //  "src",
+  // `http://openweathermap.org/img/wn/04d@2x.png"`
+  // );
+  iconElement.setAttribute("alt", response.data.weather[0].description);
+  document.querySelector("#icon").innerHTML =
+    response.data.weather[0].description;
 }
 
 //to add a button for celc or fahr
