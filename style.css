@@ -18,6 +18,15 @@ h1 {
   line-height: 28px;
   margin-bottom: 10px;
 }
+
+h2 {
+  color: rgb(22, 31, 31);
+  font-size: 18px;
+  font-weight: 100;
+  line-height: 28px;
+  margin: 0;
+  padding: 0;
+}
 ul {
   margin: 0;
   padding: 0;
@@ -29,8 +38,6 @@ li {
   height: 19px;
   line-height: 1px;
   list-style: none;
-  margin: 0;
-  padding: 0;
 }
 li:first-letter {
   text-transform: capitalize;
@@ -38,13 +45,20 @@ li:first-letter {
 
 .date-time {
   color: rgb(22, 31, 31);
-  font-size: 16px;
+  font-size: 14px;
   font-weight: 100;
   line-height: 18px;
   margin-top: 20px;
-  margin-bottom: 30px;
+  margin-bottom: 5px;
 }
-
+.sky {
+  text-transform: capitalize;
+  color: rgb(22, 31, 31);
+  font-size: 10px;
+  font-weight: 100;
+  line-height: 20px;
+  margin-top: 2px;
+}
 temperature {
   color: black;
   font-size: 65px;
@@ -68,14 +82,7 @@ temperature {
   font-weight: 100;
   color: rgb(25, 0, 255);
 }
-.sky {
-  text-transform: capitalize;
-  color: rgb(22, 31, 31);
-  font-size: 10px;
-  font-weight: 100;
-  line-height: 15px;
-  margin-top: 20px;
-}
+
 .weather-app-wrapper {
   max-width: 900px;
   margin: 30px auto;
