@@ -40,9 +40,9 @@ li:first-letter {
   line-height: 18px;
   margin-top: 10px;
 }
-.temperatures {
+.temperature .strong {
   color: black;
-  font-size: 50px;
+  font-size: 65px;
   font-weight: 500;
   line-height: 0;
   margin-right: 10px;
@@ -52,10 +52,11 @@ li:first-letter {
   width: 5px;
 }
 
-.units {
+tempurature .units {
   position: relative;
   top: -48px;
   left: 50px;
+  text-decoration: none;
 }
 .a {
   font-weight: 100;
@@ -77,4 +78,12 @@ li:first-letter {
   border: 1px solid rgb(123, 126, 126);
   padding: 20px;
   border-radius: 10px;
+}
+.temperature .active {
+  color: black;
+  cursor: default;
+  text-decoration: none;
+}
+.temperature .active:hover {
+  text-decoration: none;
 }
