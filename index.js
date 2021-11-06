@@ -27,12 +27,12 @@ dateElement.innerHTML = formatDate(currentTime);
 let searchForm = document.querySelector("#search-form");
 searchForm.addEventListener("submit", getCity);
 // search engine
-function search(event) {
-  event.preventDefault();
-  let cityElement = document.querySelector("#city");
-  let cityInput = document.querySelector("#city-input");
-  cityElement.innerHTML = cityInput.value;
-}
+//function search(event) {
+ // event.preventDefault();
+ // let cityElement = document.querySelector("#city");
+ // let cityInput = document.querySelector("#city-input");
+ // cityElement.innerHTML = cityInput.value;
+//}
 
 
 
@@ -48,13 +48,13 @@ function getCity(event) {
   axios.get(apiUrl).then(showTemperature);
 }
 
-function currentTemp(response) {
-  console.log(response.data.main.temp);
-  let showCurrentTemp = document.querySelector("#temperature");
-  showCurrentTemp.innerHTML = `${Math.round(response.data.main.temp)}`;
-  let currentLocation = document.querySelector("#city");
-  currentLocation.innerHTML = `${response.data.name}`;
-}
+//function currentTemp(response) {
+ // console.log(response.data.main.temp);
+ // let showCurrentTemp = document.querySelector("#temperature");
+ // showCurrentTemp.innerHTML = `${Math.round(response.data.main.temp)}`;
+ // let currentLocation = document.querySelector("#city");
+ // currentLocation.innerHTML = `${response.data.name}`;
+//}
 //display city, temp and info
 function getPosition(position) {
   let lat = position.coords.latitude;
@@ -109,20 +109,20 @@ function showTemperature(response) {
   iconElement.setAttribute("alt", response.data.weather[0].description);
 }
 
-//to add a button for celc or fahr
-//function convertToFahrenheit(event) {
-//  event.preventDefault();
-//  let temperatureElement = document.querySelector("#temperature");
-//  temperatureElement.innerHTML = 66;
-//}
-//function convertToCelsius(event) {
-// event.preventDefault();
-// let temperatureElement = document.querySelector("#temperature");
-// temperatureElement.innerHTML = 19;
-//}
+to add a button for celc or fahr
+function convertToFahrenheit(event) {
+ event.preventDefault();
+  let temperatureElement = document.querySelector("#temperature");
+  temperatureElement.innerHTML = 66;
+}
+function convertToCelsius(event) {
+ event.preventDefault();
+ let temperatureElement = document.querySelector("#temperature");
+ temperatureElement.innerHTML = 19;
+}
 
-//let fahrenheitLink = document.querySelector("#fahrenheit-link");
-//fahrenheitLink.addEventListener("click", convertToFahrenheit);
+let fahrenheitLink = document.querySelector("#fahrenheit-link");
+fahrenheitLink.addEventListener("click", convertToFahrenheit);
 
-//let celsiusLink = document.querySelector("#celsius-link");
-//celsiusLink.addEventListener("click", convertToCelsius);
+let celsiusLink = document.querySelector("#celsius-link");
+celsiusLink.addEventListener("click", convertToCelsius);
