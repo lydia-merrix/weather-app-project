@@ -40,12 +40,12 @@ li:first-letter {
   line-height: 18px;
   margin-top: 10px;
 }
-temperature .strong {
+temperature {
   color: black;
   font-size: 65px;
   font-weight: 500;
   line-height: 0;
-  margin-right: 10px;
+  margin-right: 5px;
 }
 .icon {
   height: 5px;
@@ -55,7 +55,7 @@ temperature .strong {
 tempurature .units {
   position: relative;
   top: -48px;
-  left: 50px;
+  left: 20px;
   margin: 0;
   text-decoration: none;
 }
