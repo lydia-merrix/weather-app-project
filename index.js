@@ -88,6 +88,7 @@ function showTemperature(response) {
   document.querySelector("#temperature").innerHTML = Math.round(
     response.data.main.temp
   );
+  celsiusTemperature = response.data.main.temp;
   // figure out weather app code to code times and add elements
   document.querySelector("#sunrise").innerHTML = formatTime(
     response.data.sys.sunrise
@@ -111,16 +112,14 @@ function showTemperature(response) {
   iconElement.setAttribute("alt", response.data.weather[0].description);
 }
 
-function convertToFahrenheit(event) {
+function displayFahrenheitTemperature(event){
   event.preventDefault();
-  let temperatureElement = document.querySelector("#temperature");
-  temperatureElement.innerHTML = 66;
+let temperatureElement = document.querySelector("#temperature");
+let fahrenheitTemperature = (temperatureElement.innerHTML *9) /5 + 32;
+temperatureElement.innerHTML = Math.round(fahrenheitTemperature);
 }
-function convertToCelsius(event) {
-  event.preventDefault();
-  let temperatureElement = document.querySelector("#temperature");
-  temperatureElement.innerHTML = 19;
-}
+
+let celsiusTemperature = null;
 
 let fahrenheitLink = document.querySelector("#fahrenheit-link");
 fahrenheitLink.addEventListener("click", convertToFahrenheit);
