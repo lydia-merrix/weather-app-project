@@ -42,7 +42,7 @@ li:first-letter {
 }
 .temperatures {
   color: black;
-  font-size: 64px;
+  font-size: 60px;
   font-weight: 500;
   line-height: 0;
   margin-right: 10px;
@@ -54,7 +54,7 @@ li:first-letter {
 
 .units {
   position: relative;
-  top: -42px;
+  top: -48px;
   left: 30px;
 }
 .a {
