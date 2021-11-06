@@ -6,6 +6,11 @@ body {
     rgb(172, 224, 217) 89.8%
   );
 }
+button {
+  border-radius: 8px;
+  color: rgb(82, 64, 243);
+}
+
 h1 {
   color: rgb(22, 31, 31);
   font-size: 24px;
@@ -36,16 +41,10 @@ li:first-letter {
   font-size: 16px;
   font-weight: 100;
   line-height: 18px;
-  margin-top: 10px;
-  margin-bottom: 10px;
+  margin-top: 20px;
+  margin-bottom: 30px;
 }
-.skies {
-  color: rgb(22, 31, 31);
-  font-size: 20px;
-  font-weight: 100;
-  line-height: 18px;
-  margin-top: 10px;
-}
+
 temperature {
   color: black;
   font-size: 65px;
@@ -78,7 +77,7 @@ temperature {
   margin-top: 20px;
 }
 .weather-app-wrapper {
-  max-width: 600px;
+  max-width: 900px;
   margin: 30px auto;
 }
 .weather-app {
