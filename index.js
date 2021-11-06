@@ -28,14 +28,11 @@ let searchForm = document.querySelector("#search-form");
 searchForm.addEventListener("submit", getCity);
 // search engine
 //function search(event) {
- // event.preventDefault();
- // let cityElement = document.querySelector("#city");
- // let cityInput = document.querySelector("#city-input");
- // cityElement.innerHTML = cityInput.value;
+// event.preventDefault();
+// let cityElement = document.querySelector("#city");
+// let cityInput = document.querySelector("#city-input");
+// cityElement.innerHTML = cityInput.value;
 //}
-
-
-
 //location
 function getCity(event) {
   event.preventDefault();
@@ -49,11 +46,11 @@ function getCity(event) {
 }
 
 //function currentTemp(response) {
- // console.log(response.data.main.temp);
- // let showCurrentTemp = document.querySelector("#temperature");
- // showCurrentTemp.innerHTML = `${Math.round(response.data.main.temp)}`;
- // let currentLocation = document.querySelector("#city");
- // currentLocation.innerHTML = `${response.data.name}`;
+// console.log(response.data.main.temp);
+// let showCurrentTemp = document.querySelector("#temperature");
+// showCurrentTemp.innerHTML = `${Math.round(response.data.main.temp)}`;
+// let currentLocation = document.querySelector("#city");
+// currentLocation.innerHTML = `${response.data.name}`;
 //}
 //display city, temp and info
 function getPosition(position) {
@@ -73,14 +70,17 @@ function buttonClick(event) {
 
 let buttonPress = document.querySelector("button");
 buttonPress.addEventListener("click", buttonClick);
-function formatTime(timestamp){
-  let time= new Date(timestamp *1000);
+function formatTime(timestamp) {
+  let time = new Date(timestamp * 1000);
   let hours = time.getHours();
-  if (hours<10){hours = `0$(hours)`}
+  if (hours < 10) {
+    hours = `0$(hours)`;
+  }
   let minutes = time.getMinutes();
-  if (minutes < 10) {minutes = `0$(minutes)`
-}
-reurn `$(hours):${minutes}`;
+  if (minutes < 10) {
+    minutes = `0$(minutes)`;
+  }
+  return `$(hours):${minutes}`;
 }
 
 function showTemperature(response) {
@@ -92,8 +92,10 @@ function showTemperature(response) {
   document.querySelector("#sunrise").innerHTML = formatTime(
     response.data.sys.sunrise
   );
-  document.querySelector("#sunset").innerHTML = formatTime(response.data.sys.sunset);
-  
+  document.querySelector("#sunset").innerHTML = formatTime(
+    response.data.sys.sunset
+  );
+
   document.querySelector("#wind").innerHTML = Math.round(
     response.data.wind.speed
   );
@@ -104,21 +106,20 @@ function showTemperature(response) {
   let iconElement = document.querySelector("#icon");
   iconElement.setAttribute(
     "src",
-   `http://openweathermap.org/img/wn/${response.data.weather[0].icon.04d@2x.png`
-   );
+    `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
+  );
   iconElement.setAttribute("alt", response.data.weather[0].description);
 }
 
-to add a button for celc or fahr
 function convertToFahrenheit(event) {
- event.preventDefault();
+  event.preventDefault();
   let temperatureElement = document.querySelector("#temperature");
   temperatureElement.innerHTML = 66;
 }
 function convertToCelsius(event) {
- event.preventDefault();
- let temperatureElement = document.querySelector("#temperature");
- temperatureElement.innerHTML = 19;
+  event.preventDefault();
+  let temperatureElement = document.querySelector("#temperature");
+  temperatureElement.innerHTML = 19;
 }
 
 let fahrenheitLink = document.querySelector("#fahrenheit-link");
