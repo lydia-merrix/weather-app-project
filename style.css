@@ -40,7 +40,7 @@ li:first-letter {
   line-height: 18px;
   margin-top: 10px;
 }
-.temperature .strong {
+.temperatures {
   color: black;
   font-size: 65px;
   font-weight: 500;
@@ -60,7 +60,7 @@ tempurature .units {
 }
 .a {
   font-weight: 100;
-  color: blue;
+  color: rgb(25, 0, 255);
 }
 .sky {
   text-transform: capitalize;
