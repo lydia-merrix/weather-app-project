@@ -9,7 +9,7 @@ body {
 button {
   border-radius: 8px;
   color: rgb(238, 239, 245);
-  background-color: blue;
+  background-color: rgb(44, 111, 219);
 }
 
 h1 {
@@ -60,11 +60,11 @@ li:first-letter {
   line-height: 20px;
   margin-top: 2px;
 }
-temperature {
+.temperature .today {
   color: black;
   font-size: 75px;
   font-weight: 500;
-  line-height: 0;
+  line-height: 15px;
   margin-right: 5px;
 }
 .icon {
