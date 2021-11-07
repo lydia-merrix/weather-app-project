@@ -55,12 +55,10 @@ function displayForecast(response) {
   <span class="weather-forecast-temperature-max" > ${Math.round(
     forecastDay.temp.max
   )}
-
 </span> 
 <span class="weather-forecast-temperature-min" > ${Math.round(
           forecastDay.temp.min
-        )}
-  
+        )}  
 </span> 
 </div>
 </div>
@@ -70,7 +68,6 @@ function displayForecast(response) {
   forecastHTML = forecastHTML + `</div>`;
   forecastElement.innerHTML = forecastHTML;
 }
-
 //location
 function getCity(event) {
   event.preventDefault();
@@ -81,30 +78,27 @@ function getCity(event) {
   let apiUrl = `${apiEndpoint}?q=${search.value}&appid=${apiKey}&units=${units}`;
   axios.get(apiUrl).then(showTemperature);
 }
-
 //display city, temp and info
 function getPosition(position) {
   let lat = position.coords.latitude;
   let lon = position.coords.longitude;
+  let units = "imperial";
   let apiKey = "fd9d9da952d98d244f4e2349d84a75af";
-  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${apiKey}`;
+  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${apiKey}&units=${units}`;
   axios.get(apiUrl).then(showTemperature);
 }
-
 function getForecast(coordinates) {
   console.log(coordinates);
   let apiKey = "fd9d9da952d98d244f4e2349d84a75af";
   let units = "imperial";
-  let apiUrl = `https://api.openweathermap.org/data/2.5/onecall?lat=${coordinates.lat}&lon=${coordinates.lon}&appid=${apiKey}&${units}`;
+  let apiUrl = `https://api.openweathermap.org/data/2.5/onecall?lat=${coordinates.lat}&lon=${coordinates.lon}&appid=${apiKey}&units=${units}`;
 
   axios.get(apiUrl).then(displayForecast);
 }
-
 function buttonClick(event) {
   event.preventDefault();
   navigator.geolocation.getCurrentPosition(getPosition);
 }
-
 let buttonPress = document.querySelector("button");
 buttonPress.addEventListener("click", buttonClick);
 function formatTime(timestamp) {
@@ -119,7 +113,6 @@ function formatTime(timestamp) {
   }
   return `${hours}:${minutes}`;
 }
-
 function showTemperature(response) {
   document.querySelector("#city").innerHTML = response.data.name;
   document.querySelector("#temperature").innerHTML = Math.round(
